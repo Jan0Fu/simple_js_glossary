@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align:center;
+}
+
+button {
+    background-color: midnightblue;
+    color: white;
+    padding: 1em;
+    border: 2px solid midnightblue;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: mediumblue;
+    border-color: mediumblue;
+}
+
+input {
+    padding: 1em;
+    border: 2px solid midnightblue;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+}
+  
+input:hover {
+    border-color: mediumblue;
+}
+  
+#content {
+    margin: 1em;
+    padding: 1em;
+    min-width: 600px;
+    background: lightsteelblue;
+}
+
+ol,ul {
+  text-align: left;
+}
+
+img {
+    border: 2px solid midnightblue;
+    border-radius: 4px;
+}  

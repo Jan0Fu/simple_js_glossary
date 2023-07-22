@@ -61,16 +61,19 @@ async function showAll() {
     
     for (const i in allBreeds.message) {
         const listItem = document.createElement("li");
-        const subList = document.createElement("ul");
-        const subListItem = document.createElement("li");
         listItem.innerHTML = i;
 
         if (allBreeds.message[i].length != 0) {
-            subListItem.innerHTML = allBreeds.message[i];
-            subList.appendChild(subListItem);
+            const subList = document.createElement("ul");
+            subList.setAttribute("type", "disc")
+            allBreeds.message[i].forEach(subBreed => {
+                const subListItem = document.createElement("li");
+                subListItem.innerHTML = subBreed;
+                listItem.appendChild(subList);
+                subList.appendChild(subListItem);
+            });
         }
         breedList.appendChild(listItem);
-        listItem.appendChild(subList);
     }
     contentDiv.replaceChildren(breedList);
 }
